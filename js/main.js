@@ -1,6 +1,6 @@
 import * as THREE from 'three'
-import { Game } from './game.js'
-import { MSG, TIPS, SPECS } from './messages.js'
+import { Game, SPECS } from './game.js'
+import { MSG, TIPS } from './messages.js'
 
 const TILE = 1
 const WALL_H = 1.6
