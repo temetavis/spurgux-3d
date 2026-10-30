@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SpurguX 3D - tositapahtumiin perustuva seikkailupeli</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="hud">
+  <div id="status">…</div>
+  <div id="inv">…</div>
+</div>
+<div id="log"></div>
+<div id="tip"></div>
+<div id="controls">
+  <button id="btn-beer" title="q">Juo kalja</button>
+  <button id="btn-lonkka" title="b">Juo lonkero</button>
+  <button id="btn-eat" title="e">Syö</button>
+  <button id="btn-wait" title=".">Odota</button>
+  <button id="btn-buy-beer" title="osta kalja (Alkossa)">Osta kalja 10 mk</button>
+  <button id="btn-buy-lonkka" title="osta lonkero (Alkossa)">Osta lonkero 15 mk</button>
+</div>
+<div id="start">
+  <div id="start-inner">
+    <h1>SpurguX 3D</h1>
+    <p>Tositapahtumiin perustuva seikkailupeli, jossa antisankari kahlaa
+    kaupunginosien halki etsien konjakkipulloa, jonka huhutaan olevan
+    tasolla 50, seuranaan ainoastaan kova jano.</p>
+    <p class="small">Liiku hiirellä: klikkaa kohderuutua 3D-näkymässä. Vierekkäin
+    oleviin olentoihin törmäämällä hakkaat niitä. Kytästä (C) kannattaa
+    pysyä erossa — ellei sitten ole pamppua. Mummoilta (M) saa rahaa,
+    jolla Alkosta ostaa juotavaa. Pisteet (.) kerättävä ennen porttia (>).
+    Nuolet/näppäimet toimivat myös: q=juo kalja, b=juo lonkero, e=syö.</p>
+    <p class="small">Pieninä vinkkinä alkoholiin tottumattomille sanottakoon, ettei sitä
+    kannata juoda aivan holtittomasti, muttei peli oikein luista aivan
+    selvin päinkään.</p>
+    <label>Nimesi: <input id="name" maxlength="12" value="Pate"></label>
+    <button id="btn-start">Eteenpäin!</button>
+    <p class="small">(C) 1987 P.N. remade in 3D. Kolmiulotteinen kunnianosoitus
+    Petri Niskan klassikolle.</p>
+  </div>
+</div>
+<div id="gameover" class="hidden">
+  <div id="gameover-inner">
+    <h1 id="go-title">…</h1>
+    <p id="go-text">…</p>
+    <button id="btn-again">Uudestaan</button>
+  </div>
+</div>
+<script type="importmap">
+{ "imports": { "three": "./vendor/three.module.js" } }
+</script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
