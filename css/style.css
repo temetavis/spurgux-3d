@@ -45,7 +45,7 @@ canvas { display: block; }
   background: #030; color: #0f0; border: 1px solid #0f0;
   padding: 8px 24px; cursor: pointer;
 }
-.hidden { display: none; }
+.hidden { display: none !important; }
 #tip {
   position: absolute; color: #0ff; font-family: "Courier New", monospace;
   font-size: 13px; pointer-events: none; z-index: 6;
