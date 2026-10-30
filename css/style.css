@@ -1,0 +1,53 @@
+html, body { margin: 0; padding: 0; overflow: hidden; background: #111; font-family: "Courier New", monospace; }
+canvas { display: block; }
+#hud {
+  position: absolute; top: 8px; left: 8px; right: 8px;
+  color: #0f0; text-shadow: 0 0 4px #0f0;
+  font-family: "Courier New", monospace; font-size: 15px;
+  pointer-events: none; z-index: 5;
+}
+#inv { margin-top: 4px; color: #ff0; text-shadow: 0 0 4px #ff0; font-size: 13px; }
+#log {
+  position: absolute; bottom: 56px; left: 8px; width: 44ch;
+  color: #fff; font-family: "Courier New", monospace; font-size: 14px;
+  pointer-events: none; z-index: 5;
+}
+#log div { margin-bottom: 2px; }
+#controls {
+  position: absolute; bottom: 8px; left: 8px; right: 8px;
+  z-index: 5; display: flex; gap: 8px;
+}
+#controls button {
+  font-family: "Courier New", monospace; font-size: 14px;
+  background: #222; color: #0f0; border: 1px solid #0f0;
+  padding: 6px 12px; cursor: pointer;
+}
+#controls button:hover { background: #030; }
+#start, #gameover {
+  position: absolute; inset: 0; z-index: 20;
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(0, 0, 0, 0.85); color: #0f0;
+}
+#start-inner, #gameover-inner {
+  max-width: 640px; padding: 24px; text-align: center;
+  font-family: "Courier New", monospace;
+  border: 1px solid #0f0; box-shadow: 0 0 24px rgba(0, 255, 0, 0.25);
+}
+#start h1, #gameover h1 { letter-spacing: 4px; text-shadow: 0 0 8px #0f0; }
+.small { font-size: 12px; color: #8f8; }
+#start label { display: block; margin: 16px 0; }
+#start input {
+  font-family: "Courier New", monospace; background: #000; color: #0f0;
+  border: 1px solid #0f0; padding: 4px 8px;
+}
+#start button, #gameover button {
+  font-family: "Courier New", monospace; font-size: 16px;
+  background: #030; color: #0f0; border: 1px solid #0f0;
+  padding: 8px 24px; cursor: pointer;
+}
+.hidden { display: none; }
+#tip {
+  position: absolute; color: #0ff; font-family: "Courier New", monospace;
+  font-size: 13px; pointer-events: none; z-index: 6;
+  text-shadow: 0 0 4px #0ff; white-space: nowrap;
+}
