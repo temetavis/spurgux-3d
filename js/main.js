@@ -220,9 +220,12 @@ function updateDrunkFx () {
   } else if (p <= 4) hallucinating = false
 }
 
+let lastKnownName = 'Pate'
+
 function startGame (name) {
+  lastKnownName = name || 'Pate'
   game = new Game(log, onDeath, onWin)
-  game.name = name || 'Pate'
+  game.name = lastKnownName
   game.log(`Kerropa nimesi ... ${game.name}${MSG.welcomeName}`)
   buildLevel()
   updateHUD()
@@ -359,7 +362,9 @@ document.getElementById('btn-start').addEventListener('click', () => {
   const n = document.getElementById('name').value.trim() || 'Pate'
   startGame(n)
 })
-document.getElementById('btn-again').addEventListener('click', () => startGame(game.name))
+document.getElementById('btn-again').addEventListener('click', () => {
+  startGame(game ? game.name : lastKnownName)
+})
 
 // --- animaatiosilmukka ---
 const clock = new THREE.Clock()
